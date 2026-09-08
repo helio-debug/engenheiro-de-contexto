@@ -255,7 +255,7 @@
     <div class="cta">
       <a class="btn" href="#oferta">
         Quero o Engenheiro de Contexto
-        <span class="price">R$27</span>
+        <span class="price">R$ 29,90</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <div class="micro">Entrega imediata · <em>30 dias de garantia</em> · livro + aula de instalação</div>
@@ -475,6 +475,43 @@ Nunca por hora.
   .final h2{margin:18px auto 0}
   .final .lead{margin-left:auto;margin-right:auto}
   .final .cta{margin-top:36px}
+
+  /* ===== empilhamento de valor (fecho) ===== */
+  .stack{margin:46px auto 0;max-width:680px;text-align:left;border-radius:16px;
+    border:1px solid rgba(255,232,112,.28);background:#15171C;overflow:hidden}
+  .stack .top{padding:20px 26px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,232,112,.10),transparent);
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .stack .top b{font:800 15px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--mark)}
+  .stack .top span{font:400 13px/1 var(--mono);color:var(--muted)}
+  .stack ul{list-style:none;margin:0;padding:8px 26px 4px}
+  .stack li{display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:baseline;
+    padding:13px 0;border-bottom:1px solid var(--line)}
+  .stack li:last-child{border-bottom:0}
+  .stack li i{font-style:normal;font-size:15px;line-height:1.4;color:var(--mark)}
+  .stack li p{margin:0;font:400 16px/1.45 var(--body);color:var(--ink)}
+  .stack li p em{display:block;font:400 13.5px/1.45 var(--body);font-style:normal;color:var(--muted);margin-top:2px}
+  .stack li s{font:600 15px/1 var(--mono);color:var(--muted);text-decoration:line-through;white-space:nowrap}
+  .stack li s.livre{text-decoration:none;color:var(--mark)}
+  .stack li.no i{color:#5C6069}
+  .stack li.no p{color:#6E727B}
+  .stack li.no s{color:#5C6069;text-decoration:none}
+  .stack .soma{padding:18px 26px;border-top:1px solid var(--line);background:rgba(255,255,255,.02);
+    display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .stack .soma span{font:400 14px/1 var(--mono);letter-spacing:.04em;color:var(--muted)}
+  .stack .soma s{font:600 18px/1 var(--mono);color:var(--muted)}
+  .stack .hoje{padding:24px 26px 26px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .stack .hoje span{font:800 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+  .stack .hoje b{font:800 44px/1 var(--display);letter-spacing:-.02em;color:var(--mark)}
+  .stack .hoje b small{font:600 15px/1 var(--mono);letter-spacing:0;color:var(--muted);margin-left:8px}
+  @media (max-width:620px){
+    .stack ul{padding:6px 18px 2px}
+    .stack .top,.stack .soma,.stack .hoje{padding-left:18px;padding-right:18px}
+    .stack li{grid-template-columns:20px 1fr;row-gap:4px}
+    .stack li s{grid-column:2;justify-self:start}
+    .stack .hoje b{font-size:38px}
+  }
+
   .guar{margin:44px auto 0;max-width:720px;padding:22px 26px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:#15171C;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;text-align:left}
   .guar .seal{width:64px;height:64px;border-radius:50%;border:2px solid var(--mark);display:grid;place-items:center;font:800 11px/1.1 var(--display);color:var(--mark);text-align:center;letter-spacing:.04em}
   .guar p{font:400 15.5px/1.5 var(--body);color:var(--muted)}
@@ -690,14 +727,31 @@ Nunca por hora.
   <div class="in">
     <div class="eyebrow" style="justify-content:center">Engenheiro de Contexto</div>
     <h2>Nos Estados Unidos o cargo já tem nome e faixa salarial. <span class="hl">No Brasil, você chega primeiro.</span></h2>
-    <p class="lead">160 páginas, a aula de 58 minutos, os 14 documentos iniciais e os 6 prompts. Entrega imediata.</p>
+    <p class="lead">Tudo o que você precisa pra fechar o primeiro cliente, e o preço de cada peça se você fosse comprar separado.</p>
+
+    <div class="stack">
+      <div class="top"><b>O que entra</b><span>entrega imediata · acesso vitalício</span></div>
+      <ul>
+        <li><i>&#10003;</i><p>O livro <em>Quinze capítulos, da entrevista de abertura ao relatório mensal do cliente.</em></p><s>R$ 197</s></li>
+        <li><i>&#10003;</i><p>A aula de 58 minutos <em>Gravação sem corte: a pasta nascendo, os conectores ligados, a demonstração das duas janelas.</em></p><s>R$ 297</s></li>
+        <li><i>&#10003;</i><p>Os 14 documentos iniciais <em>Pré-preenchidos. Você abre um formulário com lacunas, não uma folha em branco.</em></p><s>R$ 397</s></li>
+        <li><i>&#10003;</i><p>Os 6 prompts <em>Os mesmos que eu uso. Texto puro, cola em qualquer IA.</em></p><s>R$ 147</s></li>
+        <li><i>&#10003;</i><p>Bônus: Agente de Pesquisa HBR <em>Roda no primeiro cliente antes de você assinar contrato com ele.</em></p><s>R$ 297</s></li>
+        <li><i>&#10003;</i><p>Garantia de 30 dias, sem pergunta</p><s class="livre">incluso</s></li>
+        <li class="no"><i>&#10007;</i><p>Eu escrevendo a Memória do seu cliente</p><s>não entra</s></li>
+        <li class="no"><i>&#10007;</i><p>Sessão de dúvidas ao vivo comigo</p><s>não entra</s></li>
+        <li class="no"><i>&#10007;</i><p>Revisão da sua primeira pasta, feita por mim</p><s>não entra</s></li>
+      </ul>
+      <div class="soma"><span>Somando o que entra</span><s>R$ 1.335</s></div>
+      <div class="hoje"><span>Hoje você paga</span><b>R$ 29,90<small>à vista</small></b></div>
+    </div>
     <div class="cta">
-      <a class="btn" href="#oferta">Quero o Engenheiro de Contexto <span class="price">R$27</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="#oferta">Quero o Engenheiro de Contexto <span class="price">R$ 29,90</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="micro">Pagamento seguro · <em>30 dias de garantia</em> · acesso vitalício</div>
     </div>
     <div class="guar">
       <div class="seal">30<br>DIAS</div>
-      <p><b>Garantia sem pergunta.</b> Se em 30 dias você ler, aplicar no primeiro cliente e achar que o método não vale os R$27, manda um e-mail e o valor volta inteiro. O risco de testar é meu, não seu.</p>
+      <p><b>Garantia sem pergunta.</b> Se em 30 dias você ler, aplicar no primeiro cliente e achar que o método não vale os R$ 29,90, manda um e-mail e o valor volta inteiro. O risco de testar é meu, não seu.</p>
     </div>
   </div>
 </section>
