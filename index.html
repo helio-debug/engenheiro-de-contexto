@@ -288,7 +288,7 @@ Nunca por hora.
             <div class="video">
               <div>
                 <div class="kicker">Aula · 58 min</div>
-                <div class="title">Configurando a Memória do seu primeiro cliente</div>
+                <div class="title">Configurar sua primeira memória</div>
                 <div class="who">com Hélio Costa Jr.</div>
               </div>
               <div class="play"></div>
@@ -478,6 +478,48 @@ Nunca por hora.
   .final .cta{margin-top:36px}
 
 
+
+
+  /* ===== o que você vai conseguir fazer ===== */
+  .paths.solo{grid-template-columns:1fr}
+  .fazer{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--line)}
+  .fazer li{display:grid;grid-template-columns:54px 1fr auto;gap:22px;align-items:baseline;
+    padding:22px 0;border-bottom:1px solid var(--line)}
+  .fazer li b{font:800 28px/1 var(--display);letter-spacing:-.02em;color:rgba(255,232,112,.5)}
+  .fazer li .tx{font:400 19px/1.5 var(--body);color:var(--ink)}
+  .fazer li .tx i{font-style:normal;font-weight:700;color:var(--mark)}
+  .fazer li .saida{font:500 11.5px/1 var(--mono);letter-spacing:.05em;color:var(--muted);
+    background:rgba(255,255,255,.045);border:1px solid var(--line);padding:8px 11px;
+    border-radius:7px;white-space:nowrap}
+  @media (max-width:760px){
+    .fazer li{grid-template-columns:38px 1fr;row-gap:12px;padding:18px 0}
+    .fazer li b{font-size:22px}
+    .fazer li .tx{font-size:17.5px}
+    .fazer li .saida{grid-column:2;justify-self:start}
+  }
+
+  /* prompts em papel */
+  .prompts{background:#F4F2EC;border-radius:16px;overflow:hidden;
+    box-shadow:0 26px 64px rgba(0,0,0,.5), 0 0 0 1px rgba(255,232,112,.3)}
+  .prompts .hd{background:var(--mark);padding:16px 22px;display:flex;justify-content:space-between;
+    align-items:baseline;gap:12px;flex-wrap:wrap}
+  .prompts .hd h5{margin:0;font:800 13px/1 var(--display);letter-spacing:.13em;
+    text-transform:uppercase;color:#131417}
+  .prompts .hd span{font:400 12px/1 var(--mono);color:rgba(19,20,23,.6)}
+  .prompts .lista{display:block}
+  .prompts .prompt{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:15px 22px;
+    border-bottom:1px solid rgba(19,20,23,.1)}
+  .prompts .prompt:last-child{border-bottom:0}
+  .prompts .prompt em{font:600 12px/1.5 var(--mono);font-style:normal;color:#9A9DA4}
+  .prompts .prompt .t{font:600 15.5px/1.35 var(--display);letter-spacing:-.01em;color:#131417}
+  .prompts .prompt .c{margin-top:4px;font:400 12.5px/1.5 var(--mono);color:#61646C}
+  @media (max-width:860px){
+    .prompts .lista{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch}
+    .prompts .prompt{flex:0 0 78%;scroll-snap-align:start;border-bottom:0;
+      border-right:1px solid rgba(19,20,23,.1)}
+    .prompts .prompt:last-child{border-right:0}
+  }
 
   /* ===== quem escreveu ===== */
   .autor{display:grid;grid-template-columns:.62fr 1fr;gap:56px;align-items:start;margin-top:40px}
@@ -734,20 +776,9 @@ Nunca por hora.
       </div>
     </div>
 
-    <div class="paths">
+    <div class="paths solo">
       <div class="path">
-        <h4>Caminho A</h4>
-        <div class="t">Pra você mesmo</div>
-        <p>Você escreve a Memória do seu negócio, liga o CRM, o gerenciador de tráfego e o Instagram, e para de reescrever o mesmo briefing toda segunda-feira. <b>Copy, arte, e-mail e relatório saem na sua voz</b>, com os seus números, sem você explicar a empresa de novo a cada janela.</p>
-        <ul class="checks">
-          <li><i>✓</i><span><b>Segunda-feira:</b> o Claude lê o Meta Ads pelo conector e escreve o relatório da semana na sua voz.</span></li>
-          <li><i>✓</i><span><b>Terça:</b> três anúncios novos a partir do que performou, sem briefing.</span></li>
-          <li><i>✓</i><span><b>Quarta:</b> e-mail pra base, citando o número real do CRM.</span></li>
-          <li><i>✓</i><span><b>Quinta:</b> carrossel do Instagram com o argumento do melhor vendedor.</span></li>
-        </ul>
-      </div>
-      <div class="path">
-        <h4>Caminho B</h4>
+        <h4>O que você cobra</h4>
         <div class="t">Pra oferecer a outras empresas</div>
         <div class="ladder">
           <div class="row"><div><div class="n">Diagnóstico</div><div class="d">Três horas de entrevista e o mapa de onde o conhecimento mora.</div></div><div class="p">R$ 1.200</div></div>
@@ -760,33 +791,35 @@ Nunca por hora.
   </div>
 </section>
 
-<!-- ===== DOBRA 6 · A ENTREGA ===== -->
+<!-- ===== DOBRA 6 · O QUE VOCÊ VAI CONSEGUIR FAZER ===== -->
 <section class="sec alt">
   <div class="in">
-    <div class="eyebrow">O que chega na sua caixa de entrada</div>
-    <h2>O serviço inteiro escrito, na ordem em que se executa. <span class="hl">Mais os prompts.</span></h2>
-    <p class="lead">Cada capítulo termina com uma coisa feita, e não com um resumo. Os prompts são os mesmos que eu uso: você cola, responde e segue.</p>
+    <div class="eyebrow">O que muda na sua semana</div>
+    <h2>O que você vai conseguir fazer <span class="hl">sozinho.</span></h2>
+    <p class="lead">Não é lista de arquivo. É o que passa a sair da sua operação depois que o contexto está escrito e os conectores estão ligados.</p>
 
-    <div class="deliver">
-      <div class="items">
-        <div class="item big">
-          <div class="cover"><div><div class="tag">Livro · 160 páginas</div><div class="mk"></div><h3>Engenheiro<br>de Contexto</h3></div><div class="au">por<b>Hélio Costa Jr.</b></div></div>
-          <div><h5>O livro</h5><div class="t">Engenheiro de Contexto</div><p>Da entrevista de três horas ao relatório mensal do cliente. Como conduzir, como escrever, como ligar aos conectores, o que cobrar e como apresentar. Quinze capítulos, cada um com um entregável no fim.</p></div>
-        </div>
-        <div class="item"><h5>Aula · 58 min</h5><div class="t">Configurando a Memória do primeiro cliente</div><p>Gravação sem corte. Você vê a pasta nascer, os conectores sendo ligados e a demonstração das duas janelas.</p></div>
-        <div class="item"><h5>Documentos iniciais</h5><div class="t">Os 14 arquivos, pré-preenchidos</div><p>Você não abre página em branco. Abre um formulário com lacunas, e lacuna é mais fácil de fechar que folha vazia.</p></div>
-        <div class="item"><h5>Bônus</h5><div class="t">Agente de Pesquisa HBR</div><p>Pesquisa de mercado no padrão de escola de negócios. Roda no primeiro cliente antes de você assinar contrato com ele.</p></div>
-        <div class="item"><h5>Garantia</h5><div class="t">30 dias, sem pergunta</div><p>Leu, aplicou no primeiro cliente e não fechou nada? Um e-mail devolve o valor inteiro.</p></div>
+    <div class="two wide-l" style="align-items:start;gap:52px;margin-top:8px">
+      <div>
+        <ul class="fazer">
+          <li><b>01</b><span class="tx">Escrever a Memória de um cliente em três dias — a entrevista, os catorze arquivos, os conectores ligados.</span><span class="saida">memoria/ · 14 arquivos</span></li>
+          <li><b>02</b><span class="tx"><i>Segunda:</i> o Claude lê o Meta Ads pelo conector e escreve o relatório da semana na voz da empresa.</span><span class="saida">relatorio-mensal.md</span></li>
+          <li><b>03</b><span class="tx"><i>Terça:</i> três anúncios novos a partir do que performou, sem abrir briefing.</span><span class="saida">criativos/</span></li>
+          <li><b>04</b><span class="tx"><i>Quarta:</i> e-mail pra base, citando o número real que está no CRM.</span><span class="saida">campanha enviada</span></li>
+          <li><b>05</b><span class="tx"><i>Quinta:</i> carrossel do Instagram com o argumento do melhor vendedor da casa.</span><span class="saida">conteudo/</span></li>
+          <li><b>06</b><span class="tx">Fazer a demonstração das duas janelas na frente do dono, em noventa segundos.</span><span class="saida">fecha o contrato</span></li>
+        </ul>
       </div>
 
       <div class="prompts">
         <div class="hd"><h5>Os 6 prompts</h5><span>texto puro · cola em qualquer IA</span></div>
-        <div class="prompt"><em>01</em><div><div class="t">A entrevista de três horas</div><div class="c">Você é meu assistente numa entrevista com o dono de <span class="y">[empresa]</span>. Objetivo: descobrir onde vive o conhecimento que não está escrito. Para cada resposta pronta, me sugira a pergunta que abre a exceção…</div></div></div>
-        <div class="prompt"><em>02</em><div><div class="t">Da gravação aos 14 arquivos</div><div class="c">Leia a transcrição abaixo e distribua o conteúdo nos arquivos <span class="y">00-negocio.md</span> a <span class="y">07-numeros.md</span>. Regra: só o que o dono disse. Marque com [VALIDAR] o que ficou ambíguo…</div></div></div>
-        <div class="prompt"><em>03</em><div><div class="t">A demonstração de duas janelas</div><div class="c">Escreva o mesmo e-mail duas vezes. Janela 1: sem nenhum arquivo. Janela 2: lendo a pasta <span class="y">memoria/</span>. Mostre a diferença lado a lado…</div></div></div>
-        <div class="prompt"><em>04</em><div><div class="t">Ligar um conector</div><div class="c">Com o <span class="y">[CRM / Meta Ads / Instagram]</span> conectado, leia os últimos 30 dias e escreva o relatório na voz de <span class="y">04-voz.md</span>, usando só os números de <span class="y">07-numeros.md</span>…</div></div></div>
-        <div class="prompt"><em>05</em><div><div class="t">A proposta comercial</div><div class="c">Monte a proposta do diagnóstico e da engenharia de contexto pra <span class="y">[empresa]</span>, com o preço de <span class="y">[R$]</span>, citando três achados da entrevista que o dono não esperava…</div></div></div>
-        <div class="prompt"><em>06</em><div><div class="t">A revisão trimestral</div><div class="c">Compare a pasta <span class="y">memoria/</span> com o CRM dos últimos 90 dias. Liste o que mudou e o que está desatualizado. Proponha as edições…</div></div></div>
+        <div class="lista">
+          <div class="prompt"><em>01</em><div><div class="t">A entrevista</div><div class="c">Descobrir onde vive o conhecimento que ninguém escreveu.</div></div></div>
+          <div class="prompt"><em>02</em><div><div class="t">Da gravação aos 14 arquivos</div><div class="c">Distribuir a transcrição nos arquivos, marcando o que ficou ambíguo.</div></div></div>
+          <div class="prompt"><em>03</em><div><div class="t">A demonstração de duas janelas</div><div class="c">O mesmo e-mail sem contexto e lendo a pasta, lado a lado.</div></div></div>
+          <div class="prompt"><em>04</em><div><div class="t">Ligar um conector</div><div class="c">Ler os últimos 30 dias e escrever o relatório na voz do arquivo.</div></div></div>
+          <div class="prompt"><em>05</em><div><div class="t">A proposta comercial</div><div class="c">Diagnóstico e engenharia, com três achados que o dono não esperava.</div></div></div>
+          <div class="prompt"><em>06</em><div><div class="t">A revisão trimestral</div><div class="c">Comparar a pasta com o CRM e listar o que está desatualizado.</div></div></div>
+        </div>
       </div>
     </div>
   </div>
