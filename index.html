@@ -477,6 +477,36 @@ Nunca por hora.
   .final .cta{margin-top:36px}
 
 
+
+  /* ===== calls gravadas ===== */
+  .recs{margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .rec{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    display:flex;flex-direction:column}
+  .rec .shot{position:relative;aspect-ratio:16/10;background:#1C1E22 center/cover no-repeat;
+    background-image:var(--shot,none);display:grid;place-items:center}
+  .rec .shot::before{content:'';position:absolute;inset:0;background:rgba(10,11,13,.34)}
+  .rec .pl{position:relative;z-index:2;width:44px;height:44px;border-radius:50%;
+    background:rgba(244,242,236,.16);border:1px solid rgba(244,242,236,.4);
+    display:grid;place-items:center;backdrop-filter:blur(3px)}
+  .rec .pl::after{content:'';border-left:12px solid #F4F2EC;border-top:8px solid transparent;
+    border-bottom:8px solid transparent;margin-left:3px}
+  .rec .dur{position:absolute;right:9px;bottom:9px;z-index:2;font:500 11px/1 var(--mono);
+    color:#F4F2EC;background:rgba(10,11,13,.72);padding:5px 8px;border-radius:5px}
+  .rec .meta{padding:13px 14px 15px}
+  .rec .meta .t{font:600 14.5px/1.3 var(--display);letter-spacing:-.01em;color:var(--ink)}
+  .rec .meta .s{margin-top:4px;font:400 12px/1.3 var(--mono);color:var(--muted)}
+  .rec.mais .shot{background:rgba(255,232,112,.06)}
+  .rec.mais .shot::before{display:none}
+  .rec.mais .shot b{font:800 26px/1.1 var(--display);color:var(--mark);text-align:center}
+  .rec.mais .shot b em{display:block;font:400 12px/1.4 var(--mono);font-style:normal;
+    color:var(--muted);margin-top:6px;letter-spacing:.04em}
+  @media (max-width:900px){.recs{grid-template-columns:repeat(2,1fr);gap:12px}}
+  @media (max-width:520px){
+    .rec .meta{padding:11px 12px 13px}
+    .rec .meta .t{font-size:13px}
+    .rec .meta .s{font-size:11px}
+  }
+
   /* ===== empilhamento de valor (fecho) — cartão claro sobre o escuro ===== */
   .stack{margin:46px auto 0;max-width:680px;text-align:left;border-radius:18px;
     background:#F4F2EC;overflow:hidden;
@@ -623,6 +653,53 @@ Nunca por hora.
     <div class="demo-note">Cinco minutos de diferença. É essa demonstração, na hora certa da reunião, que fecha o contrato.</div>
   </div>
 </section>
+
+<section class="sec">
+  <div class="in">
+    <div class="eyebrow">Não é teoria</div>
+    <h2>Toda semana eu sento com alguém montando isso. <span class="hl">Estas são oito dessas conversas.</span></h2>
+    <p class="lead">Escritório de advocacia, consultoria, auditoria, escola, SEO. Gente que já atende cliente e passou a cobrar pelo contexto. As calls ficam gravadas.</p>
+    <div class="recs">
+      <div class="rec" style="--shot:url('img/calls/renata.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">50 min</span></div>
+        <div class="meta"><div class="t">Call MktOps &lt;&gt; Renata</div><div class="s">Lume Education</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/januario.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">60 min</span></div>
+        <div class="meta"><div class="t">MktOps &lt;&gt; Januário</div><div class="s">Gagliardi</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/rv.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">47 min</span></div>
+        <div class="meta"><div class="t">MktOps + R&amp;V Auditores</div><div class="s">Auditoria e consultoria</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/gustavo-mauro.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">59 min</span></div>
+        <div class="meta"><div class="t">MktOps &lt;&gt; Gustavo</div><div class="s">Gustavo Mauro</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/gustavo-heck.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">58 min</span></div>
+        <div class="meta"><div class="t">MktOps &lt;&gt; Gustavo Heck</div><div class="s">ogustavoheck.com.br</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/vendanna.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">53 min</span></div>
+        <div class="meta"><div class="t">Artemis + Vendanna</div><div class="s">Mariana · SEO</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/tallisson.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">43 min</span></div>
+        <div class="meta"><div class="t">MktOps &lt;&gt; Tallisson</div><div class="s">Souza Advogados</div></div>
+      </div>
+      <div class="rec" style="--shot:url('img/calls/reach.jpg')">
+        <div class="shot"><span class="pl"></span><span class="dur">51 min</span></div>
+        <div class="meta"><div class="t">MktOps &lt;&gt; Reach Leads</div><div class="s">analusabatini.com.br</div></div>
+      </div>
+      <div class="rec mais">
+        <div class="shot"><b>+40<em>gravadas</em></b></div>
+        <div class="meta"><div class="t">E assim toda semana</div><div class="s">desde 2025</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ===== DOBRA 5 · O DINHEIRO ===== -->
 <section class="sec">
