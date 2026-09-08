@@ -354,8 +354,9 @@ Nunca por hora.
 
   /* foto com legenda */
   .photo{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55)}
-  .photo img{display:block;width:100%;height:var(--h,420px);object-fit:cover;object-position:var(--pos,center);filter:saturate(.85) contrast(1.05)}
+  .photo img,.photo video{display:block;width:100%;height:var(--h,420px);object-fit:cover;object-position:var(--pos,center);filter:saturate(.85) contrast(1.05)}
   .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(17,19,24,.85) 100%)}
+  .photo.com-video::after{background:linear-gradient(180deg,transparent 0%,transparent 46%,rgba(17,19,24,.76) 74%,rgba(17,19,24,.97) 100%)}
   .photo .cap{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;font:400 15px/1.45 var(--body);color:var(--ink)}
   .photo .cap b{display:block;font:600 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mark);margin-bottom:8px}
 
@@ -759,9 +760,9 @@ Nunca por hora.
 <section class="sec">
   <div class="in">
     <div class="two wide-r" style="align-items:start">
-      <div class="photo" style="--h:520px;--pos:center">
-        <img src="img/quem-paga.jpg" alt="">
-        <div class="cap"><b>Quem paga</b>Indústria, clínica, construtora, loja. Qualquer empresa onde o conhecimento mora em gente, e a gente sai.</div>
+      <div class="photo com-video" style="--h:520px;--pos:center">
+        <video src="img/operacao.mp4" poster="img/operacao-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="cap"><b>A operação rodando</b>Do bruto ao reel exportado, com legenda e trilha, sem abrir editor. Uma pessoa.</div>
       </div>
       <div>
         <div class="eyebrow">O dinheiro</div>
