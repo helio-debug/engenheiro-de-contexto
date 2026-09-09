@@ -612,6 +612,13 @@ Nunca por hora.
   .stack li.no i{color:#B9BCC2}
   .stack li.no p{color:#A2A5AC;font-weight:500}
   .stack li.no s{color:#B9BCC2;text-decoration:none}
+
+  .stack li p em+.det{margin-top:11px}
+  .stack .det{display:flex;flex-wrap:wrap;gap:6px;width:100%}
+  .stack .det span{font:500 10.5px/1.35 var(--mono);color:#5E6169;
+    background:rgba(19,20,23,.05);border:1px solid rgba(19,20,23,.10);
+    padding:6px 8px;border-radius:5px;letter-spacing:.01em}
+  @media (max-width:620px){.stack .det span{font-size:9.5px;padding:5px 7px}}
   .stack .soma{padding:16px 26px;border-top:1px solid rgba(19,20,23,.10);background:#EBE8E0;
     display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .stack .soma span{font:400 14px/1 var(--mono);letter-spacing:.04em;color:#61646C}
@@ -854,10 +861,10 @@ Nunca por hora.
     <div class="stack">
       <div class="top"><b>O que entra</b><span>entrega imediata · acesso vitalício</span></div>
       <ul>
-        <li><i>&#10003;</i><p>O livro <em>Quinze capítulos, da entrevista de abertura ao relatório mensal do cliente.</em></p><s>R$ 197</s></li>
-        <li><i>&#10003;</i><p>A aula de 58 minutos <em>Gravação sem corte: a pasta nascendo, os conectores ligados, a demonstração das duas janelas.</em></p><s>R$ 297</s></li>
-        <li><i>&#10003;</i><p>Os 14 documentos iniciais <em>Pré-preenchidos. Você abre um formulário com lacunas, não uma folha em branco.</em></p><s>R$ 397</s></li>
-        <li><i>&#10003;</i><p>Os 6 prompts <em>Os mesmos que eu uso. Texto puro, cola em qualquer IA.</em></p><s>R$ 147</s></li>
+        <li><i>&#10003;</i><p>O livro <em>Quinze capítulos, da entrevista de abertura ao relatório mensal do cliente.</em><span class="det"><span>01 Engenharia de contexto</span><span>02 A Memória</span><span>03 As Frentes</span><span>04 Voz e criativo</span><span>05 Mídia</span><span>06 A busca virou resposta</span><span>07 Funil e medição</span><span>08 A regra nunca está escrita</span><span>09 Ninguém assina fé</span><span>10 As perguntas que ninguém fez</span><span>11 O que permanece e o que quebra</span><span>12 O preço</span><span>13 Os três obstáculos</span><span>14 O cliente que já te paga</span><span>15 Fecho</span></span></p><s>R$ 197</s></li>
+        <li><i>&#10003;</i><p>A aula de 58 minutos <em>Gravação sem corte: a pasta nascendo, os conectores ligados, a demonstração das duas janelas.</em><span class="det"><span>01 A entrevista</span><span>02 Os cinco lugares onde o conhecimento mora</span><span>03 Escrever os 14 arquivos</span><span>04 Ligar às Frentes</span><span>05 A demonstração de duas janelas</span><span>06 O que cobrar, e como</span></span></p><s>R$ 297</s></li>
+        <li><i>&#10003;</i><p>Os 14 documentos iniciais <em>Pré-preenchidos. Você abre um formulário com lacunas, não uma folha em branco.</em><span class="det"><span>00-negocio.md</span><span>01-cliente-certo.md</span><span>02-cliente-errado.md</span><span>03-preco.md</span><span>04-voz.md</span><span>05-concorrentes.md</span><span>06-ja-testado.md</span><span>07-numeros.md</span><span>frentes/copy.md</span><span>frentes/design.md</span><span>frentes/email.md</span><span>frentes/trafego.md</span><span>frentes/crm.md</span><span>frentes/painel.md</span></span></p><s>R$ 397</s></li>
+        <li><i>&#10003;</i><p>Os 6 prompts <em>Os mesmos que eu uso. Texto puro, cola em qualquer IA.</em><span class="det"><span>01 A entrevista</span><span>02 Da gravação aos 14 arquivos</span><span>03 A demonstração de duas janelas</span><span>04 Ligar um conector</span><span>05 A proposta comercial</span><span>06 A revisão trimestral</span></span></p><s>R$ 147</s></li>
         <li><i>&#10003;</i><p>Bônus: Agente de Pesquisa HBR <em>Roda no primeiro cliente antes de você assinar contrato com ele.</em></p><s>R$ 297</s></li>
         <li><i>&#10003;</i><p>Garantia de 30 dias, sem pergunta</p><s class="livre">incluso</s></li>
         <li class="no"><i>&#10007;</i><p>Eu escrevendo a Memória do seu cliente</p><s>não entra</s></li>
